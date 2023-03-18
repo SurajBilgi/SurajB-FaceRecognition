@@ -1,6 +1,9 @@
-from Detector import main_app
-from create_classifier import train_classifer
-from create_dataset import start_capture
+# from Detector import main_app
+# from create_classifier import train_classifer
+from Training import recognizer
+from creatingDataset import start_capture
+from FaceRecognition import face_recognizer
+from generate_database import mask_generators
 import tkinter as tk
 from tkinter import font as tkfont
 from tkinter import messagebox,PhotoImage
@@ -58,7 +61,7 @@ class StartPage(tk.Frame):
             self.controller = controller
             #load = Image.open("homepagepic.png")
             #load = load.resize((250, 250), Image.ANTIALIAS)
-            render = PhotoImage(file='homepagepic.png')
+            render = PhotoImage(file='applogor.png')
             img = tk.Label(self, image=render)
             img.image = render
             img.grid(row=0, column=1, rowspan=4, sticky="nsew")
@@ -155,16 +158,17 @@ class PageThree(tk.Frame):
 
     def capimg(self):
         self.numimglabel.config(text=str("Captured Images = 0 "))
-        messagebox.showinfo("INSTRUCTIONS", "We will Capture 300 pic of your Face.")
+        messagebox.showinfo("INSTRUCTIONS", "We will Capture 100 pic of your Face.")
         x = start_capture(self.controller.active_name)
+        mask_generators()
         self.controller.num_of_images = x
-        self.numimglabel.config(text=str("Number of images captured = "+str(x)))
+        self.numimglabel.config(text=str("Number of images captured = "+"100"))
 
     def trainmodel(self):
-        if self.controller.num_of_images < 300:
-            messagebox.showerror("ERROR", "No enough Data, Capture at least 300 images!")
-            return
-        train_classifer(self.controller.active_name)
+        # if self.controller.num_of_images < 300:
+        #     messagebox.showerror("ERROR", "No enough Data, Capture at least 300 images!")
+        #     return
+        recognizer()
         messagebox.showinfo("SUCCESS", "The modele has been successfully trained!")
         self.controller.show_frame("PageFour")
 
@@ -187,7 +191,8 @@ class PageFour(tk.Frame):
         button4.grid(row=1,column=1, sticky="ew", ipadx=5, ipady=4, padx=10, pady=10)
 
     def openwebcam(self):
-        main_app(self.controller.active_name)
+        # main_app(self.controller.active_name)
+        face_recognizer()
     #def gender_age_pred(self):
      #  ageAndgender()
     #def emot(self):
@@ -196,6 +201,6 @@ class PageFour(tk.Frame):
 
 
 app = MainUI()
-app.iconphoto(False, tk.PhotoImage(file='icon.ico'))
+app.iconphoto(False, tk.PhotoImage(file='applogor.png'))
 app.mainloop()
 
