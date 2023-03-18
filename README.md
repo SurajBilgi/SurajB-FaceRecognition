@@ -38,4 +38,8 @@ $ pip install -r  requirements.txt
 $ python app-gui.py
 ```
 
-
+# GUI Demo
+<p>
+<p align="left"><img height="250" width=200" src="https://github.com/Garvit-32/Face-recognition-in-presence-of-Mask/blob/master/readmeImages/01-1.jpg" alt="01-1"/><img src="https://github.com/Garvit-32/Face-recognition-in-presence-of-Mask/blob/master/readmeImages/arrow.png" alt="arrow"/><img height="250" width=200" src="https://github.com/Garvit-32/Face-recognition-in-presence-of-Mask/blob/master/readmeImages/01-2.jpg" alt="01-2"/>
+</p>
+</p>

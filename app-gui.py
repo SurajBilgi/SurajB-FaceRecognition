@@ -19,7 +19,7 @@ class MainUI(tk.Tk):
             for i in z:
                 names.add(i)
         self.title_font = tkfont.Font(family='Helvetica', size=16, weight="bold")
-        self.title("Face Recognizer")
+        self.title("SafePro Face Recognizer")
         self.resizable(False, False)
         self.geometry("500x250")
         self.protocol("WM_DELETE_WINDOW", self.on_closing)
@@ -61,10 +61,10 @@ class StartPage(tk.Frame):
             img = tk.Label(self, image=render)
             img.image = render
             img.grid(row=0, column=1, rowspan=4, sticky="nsew")
-            label = tk.Label(self, text="        Home Page        ", font=self.controller.title_font,fg="#263942")
+            label = tk.Label(self, text="        Welcome to SafePro        ", font=self.controller.title_font,fg="#263942")
             label.grid(row=0, sticky="ew")
-            button1 = tk.Button(self, text="   Add a User  ", fg="#ffffff", bg="#263942",command=lambda: self.controller.show_frame("PageOne"))
-            button2 = tk.Button(self, text="   Check a User  ", fg="#ffffff", bg="#263942",command=lambda: self.controller.show_frame("PageTwo"))
+            button1 = tk.Button(self, text="   Register a User  ", fg="#ffffff", bg="#263942",command=lambda: self.controller.show_frame("PageOne"))
+            button2 = tk.Button(self, text="   Click here to TRY!  ", fg="#ffffff", bg="#263942",command=lambda: self.controller.show_frame("PageTwo"))
             button3 = tk.Button(self, text="Quit", fg="#263942", bg="#ffffff", command=self.on_closing)
             button1.grid(row=1, column=0, ipady=3, ipadx=7)
             button2.grid(row=2, column=0, ipady=3, ipadx=2)
