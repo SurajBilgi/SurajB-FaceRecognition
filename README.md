@@ -5,6 +5,16 @@
   - Company : Safepro video research labs pvt ltd 
   - Role : Computer Vision Engineer
 
+# Assignment (Problem Statement):
+
+  ## Title: Face recognition with Mask and Face(Name) detection 
+
+  -     Face to be recognised with & without mask and Name using the webcam resource.
+  -     Mask and without mask to be detected.
+  -     Person name to be detected.
+  -     Connect this to a simple UI
+  -     Upload to Google drive for our review.
+
 
 # A very Simple Gui app for Face Detection 
 
