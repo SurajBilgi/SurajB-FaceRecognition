@@ -1,4 +1,8 @@
-# Face Recogniton GUI-APP
+# Face Recogniton Tkinter App with Face Recognition
+
+  - Author : Suraj S Bilgi
+  - Submitted on : 18th March 2023
+  - Company : Safepro video research labs pvt ltd 
 
 
 # A very Simple Gui app for Face Detection 
@@ -11,7 +15,7 @@
 #  New Features!
 
   - Creates a New set of Dataset along with Masks annotation
-  - Detects weather the Person is wearing Mask or Not. 
+  - Detects whether the Person is wearing Mask or Not. 
   
   
 # Installation
