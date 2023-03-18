@@ -3,6 +3,7 @@
   - Author : Suraj S Bilgi
   - Submitted on : 18th March 2023
   - Company : Safepro video research labs pvt ltd 
+  - Role : Computer Vision Engineer
 
 
 # A very Simple Gui app for Face Detection 
@@ -12,7 +13,7 @@
   - Trains a Model
   - Face Recognition and Mask Detection
 
-#  New Features!
+#  Features!
 
   - Creates a New set of Dataset along with Masks annotation
   - Detects whether the Person is wearing Mask or Not. 
@@ -22,7 +23,7 @@
 
 1 : Create a New Environment
 
-```sh
+```py
 $ conda create -p env -y python=3.8
 ```
 

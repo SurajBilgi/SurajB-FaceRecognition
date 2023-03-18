@@ -77,7 +77,8 @@ def face_recognizer():
 
             # Check the ID if exist
 
-            num_lis = [1,2,3,4,5,6,7,8,9,17]
+            # num_lis = [1,2,3,4,5,6,7,8,9,17]
+            num_lis = [i for i in range(1,30)]
 
             if(Id in num_lis and confidence > 30):
                 Id = "{}".format(name_list[Id-1])+" {0:.2f}%".format(round(100 - confidence, 2))
